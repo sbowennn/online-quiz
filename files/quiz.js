@@ -11,11 +11,11 @@ const questions = [
     answer: 1
   },
   {
-  // question 2 
+  // question 2
     question: "Which html tag contains a web page's metadata?",
     options: [
       "<head>",
-      "<article>",
+      "<metadata>",
       "<body>",
       "<html>"
     ],
@@ -45,25 +45,17 @@ const questions = [
   },
   {
   // question 5 
-    question: "",
+    question: "Select the tag below that is NOT self-closing.",
     options: [
-
+      "<hr>",
+      "<meta>",
+      "<area>",
+      "<textarea>"
     ],
-    answer:
+    answer: 3
   },
   {
   // question 6 
-    question: "What does CSS stand for?",
-    options: [
-      "Cascading Style Sheets",
-      "Custom Styling Sheets",
-      "Creative Style Sheets",
-      "Content Styling Sheets"
-    ],
-    answer: 0
-  },
-  {
-  // question 7 
     question: "What is the <link> tag used for in HTML files?",
     options: [
       "To make sure all links are styled correctly on the page.",
@@ -72,6 +64,17 @@ const questions = [
       "To make sure the hyperlink that navigates to another webpage is defined."
     ],
     answer: 2
+  },
+  {
+  // question 7 
+    question: "The abbreviation CSS stands for?",
+    options: [
+      "Cascading Style Sheets",
+      "Custom Styling Sheets",
+      "Creative Style Sheets",
+      "Content Styling Sheets"
+    ],
+    answer: 0
   },
   {
   // question 8 
@@ -97,7 +100,7 @@ const questions = [
   },
   {
   // question 10 
-    question: "What is the correct syntax to style multiple selectors?",
+    question: "Which is the correct syntax to style multiple selectors?",
     options: [
       ".nav-menu; p { };",
       ".nav-menu: p { };",
@@ -108,7 +111,7 @@ const questions = [
   },
   {
   // question 11 
-    question: "What is the correct syntax to select an element inside another element?",
+    question: "Which is the correct syntax to select an element inside another element?",
     options: [
       ".home-text li { };",
       ".home-text_li { };",
@@ -119,74 +122,13 @@ const questions = [
   },
   {
   // question 12 
-    question: "Which option is correct to set the top and bottom margins to 32 pixels and left and right margins to 16 pixels?",
+    question: "How to set the top and bottom margins to 32 pixels, and left and right margins to 16 pixels?",
     options: [
-  
+      "margins: 32px 16px",
+      "margins: 16px 32px 16px 32px",
+      "margin: 32px 16px",
+      "margin: 16px 32px 32px 16px"
     ],
-    answer:
+    answer: 2
   },
-  {
-  // question 13 
-    question: "",
-    options: [
-  
-    ],
-    answer:
-  },
-  {
-  // question 14 
-    question: "",
-    options: [
-    
-    ],
-    answer:
-  },
-  {
-  // question 15 
-    question: "",
-    options: [
-  
-    ],
-    answer:
-  },
-  {
-  // question 16 
-    question: "",
-    options: [
-  
-    ],
-    answer:
-  },
-  {
-  // question 17 
-    question: "",
-    options: [
-  
-    ],
-    answer:
-  },
-  {
-  // question 18 
-    question: "",
-    options: [
-  
-    ],
-    answer:
-  },
-  {
-  // question 19 
-    question: "",
-    options: [
-  
-    ],
-    answer:
-  },
-  {
-  // question 20 
-    question: "",
-    options: [
-  
-    ],
-    answer:
-  },
-];
+  ];
