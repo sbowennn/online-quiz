@@ -132,3 +132,60 @@ const questions = [
     answer: 2
   },
   ];
+
+
+
+  let currentQuestionIndex = 0;
+  let score = 0;
+  
+  // DOM Elements
+  const questionElement = document.querySelector(".question");
+  const optionsElement = document.querySelector(".options");
+  const nextButton = document.getElementById("next-button");
+  const resultElement = document.getElementById("result");
+  
+  function loadQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    questionElement.textContent = currentQuestion.question;
+    optionsElement.innerHTML = ""; // Clear old options
+  
+    currentQuestion.options.forEach((option, index) => {
+      const li = document.createElement("li");
+      const button = document.createElement("button");
+      button.textContent = option;
+      button.onclick = () => selectAnswer(index);
+      li.appendChild(button);
+      optionsElement.appendChild(li);
+    });
+  
+    nextButton.classList.add("hidden");
+  }
+  
+  function selectAnswer(selectedIndex) {
+    const correctAnswer = questions[currentQuestionIndex].answer;
+    if (selectedIndex === correctAnswer) {
+      score++;
+      alert("Correct! 🎉");
+    } else {
+      alert(`Incorrect. 😞 The correct answer is: ${questions[currentQuestionIndex].options[correctAnswer]}`);
+    }
+    nextButton.classList.remove("hidden");
+  }
+  
+  function showResult() {
+    document.getElementById("quiz").classList.add("hidden");
+    resultElement.classList.remove("hidden");
+    resultElement.textContent = `You scored ${score} out of ${questions.length}`;
+  }  
+  
+  nextButton.onclick = () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+      loadQuestion();
+    } else {
+      showResult();
+    }
+  };
+  
+  // Initialise Quiz
+  loadQuestion();

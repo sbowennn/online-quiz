@@ -3,9 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Online Quiz</title>
+
 </head>
 <body>
-  
+  <h1>Online Quiz</h1>
+  <div id="quiz">
+    <section class="question-container">
+      <p class="question">Loading question...</p>
+      <ul class="options"></ul>
+      <button id="next-button" class="next-button hidden">Next</button>
+    </section>
+  </div>
+  <section id="result" class="hidden result"></section>
+  <script src="quiz.js"></script>
 </body>
 </html>
