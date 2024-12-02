@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&family=Parkinsans:wght@300..800&family=Shippori+Mincho&display=swap');
 
 body {
+  scroll-behavior: smooth;
   font-family: "Parkinsans", sans-serif;
   max-width: 600px;
-  margin: 20px auto;
+  margin: auto;
   text-align: center;
   font-size: 40px;
 }
@@ -12,7 +13,7 @@ h1 {
   color:#002c5c;
 }
 .question {
-  margin: 20px 0;
+  margin: 0;
   font-size: 22px;
   color: #004894;
   font-weight: 600;
@@ -20,16 +21,17 @@ h1 {
 .options {
   list-style-type: none;
   border: none;
-  padding: 20px 10px;
+  padding: 15px 5px;
   font-size: 38px;
   
 }
 .options li button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: 2px solid #6eadf0;
+  padding: 10px 15px;
+  margin: 6px;
+  font-size: 16px;
+  border: 2px solid #5b99ef;
   border-radius: 5px;
-  background-color: #6eadf0;
+  background-color: #5b99ef;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s;
@@ -40,7 +42,7 @@ h1 {
 }
 .next-button {
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 24px;
   border: 2px solid #007BFF;
   border-radius: 5px;
   background-color: #007BFF;
@@ -54,6 +56,6 @@ h1 {
   display: none;
 }
 .result {
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: 0px;
+  margin-top: 10px;
 }
