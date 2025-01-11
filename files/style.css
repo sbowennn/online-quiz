@@ -3,17 +3,43 @@
 body {
   scroll-behavior: smooth;
   font-family: "Parkinsans", sans-serif;
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
   text-align: center;
   font-size: 40px;
 }
+section{
+  padding: 30px;
+}
 h1 {
-  font-size: 60px;
+  font-size: 70px;
   color:#002c5c;
 }
+.intro{
+  font-size: 40px;
+  font-weight: 500;
+  color: #004894;
+}
+.steps{
+  font-size: 32px;
+  font-weight: 400;
+  color: #356ebf;
+}
+.final{
+  font-size: 35px;
+  font-weight: 450;
+  color: #004894;
+}
+.button{
+  font-size: 40px;
+  font-weight: 550;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  background-color: #356ebf;
+}
 .question {
-  margin: 0;
+  margin: 20px;
   font-size: 22px;
   color: #004894;
   font-weight: 600;
@@ -23,7 +49,6 @@ h1 {
   border: none;
   padding: 15px 5px;
   font-size: 38px;
-  
 }
 .options li button {
   padding: 10px 15px;
@@ -39,13 +64,13 @@ h1 {
 .options li button:hover {
   color:cornflowerblue;
   background-color: white;
-}
+} 
 .next-button {
   padding: 10px 20px;
   font-size: 24px;
-  border: 2px solid #007BFF;
+  border: 2px solid #004894;
   border-radius: 5px;
-  background-color: #007BFF;
+  background-color: #004894;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s;
