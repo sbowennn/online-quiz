@@ -9,7 +9,8 @@ body {
   font-size: 40px;
 }
 section{
-  padding: 30px;
+  padding: 20px;
+  margin-bottom: 50px;
 }
 h1 {
   font-size: 70px;
@@ -19,6 +20,10 @@ h1 {
   font-size: 40px;
   font-weight: 500;
   color: #004894;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+  text-decoration-color: #356ebf;
 }
 .steps{
   font-size: 32px;
@@ -26,21 +31,23 @@ h1 {
   color: #356ebf;
 }
 .final{
-  font-size: 35px;
+  font-size: 38px;
   font-weight: 450;
   color: #004894;
+  font-style: italic;
 }
 .button{
   font-size: 40px;
+  letter-spacing: 2px;
   font-weight: 550;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 8px;
   color: white;
   background-color: #356ebf;
 }
 .question {
   margin: 20px;
-  font-size: 22px;
+  font-size: 28px;
   color: #004894;
   font-weight: 600;
 }
@@ -49,20 +56,23 @@ h1 {
   border: none;
   padding: 15px 5px;
   font-size: 38px;
+  font-weight: 300;
+  
 }
 .options li button {
-  padding: 10px 15px;
+  padding: 12px 35px;
   margin: 6px;
-  font-size: 16px;
-  border: 2px solid #5b99ef;
+  font-size: 22px;
+  font-weight: 300;
+  border: 2px solid #6495ed;
   border-radius: 5px;
-  background-color: #5b99ef;
+  background-color: #6495ed;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s;
 }
 .options li button:hover {
-  color:cornflowerblue;
+  color:#6495ed;
   background-color: white;
 } 
 .next-button {
@@ -74,13 +84,13 @@ h1 {
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s;
-
 }
-
 .hidden {
   display: none;
 }
 .result {
-  font-size: 0px;
-  margin-top: 10px;
+  color: #004894;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 100px;
 }

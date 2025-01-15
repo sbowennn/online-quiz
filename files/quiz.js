@@ -174,7 +174,7 @@ const questions = [
   function showResult() {
     document.getElementById("quiz").classList.add("hidden");
     resultElement.classList.remove("hidden");
-    resultElement.textContent = `You scored ${score} out of ${questions.length}`;
+    resultElement.textContent = `You scored ${score} out of ${questions.length}!`;
   }  
   
   nextButton.onclick = () => {
