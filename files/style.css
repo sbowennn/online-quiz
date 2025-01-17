@@ -45,6 +45,15 @@ h1 {
   color: white;
   background-color: #356ebf;
 }
+.back{
+  text-align: left !important;
+  margin-left: 0 !important;
+  font-size: 18px;
+  color: #356ebf;
+}
+.back:hover {
+  color: #002c5c;
+}
 .question {
   margin: 20px;
   font-size: 28px;

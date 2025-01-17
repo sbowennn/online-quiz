@@ -14,6 +14,7 @@ The quiz tests your knowledge in general and basic coding terms and concepts, sp
 ## How does it work?
 
 - Access the quiz;
+- Read the instructions and start quiz;
 - Answer the questions;
 - Get the results and the correct answers;
 - Try it again to get 100%.
