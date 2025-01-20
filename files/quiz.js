@@ -136,17 +136,25 @@ const questions = [
 
   let currentQuestionIndex = 0;
   let score = 0;
+
+  // Randomise 
+  const randomQuestions = [...questions].sort(() => Math.random() - 0.5);
+
   
   // DOM Elements
   const questionElement = document.querySelector(".question");
   const optionsElement = document.querySelector(".options");
   const nextButton = document.getElementById("next-button");
   const resultElement = document.getElementById("result");
+  const questionNumber = document.getElementById("q-number");
   
   function loadQuestion() {
-    const currentQuestion = questions[currentQuestionIndex];
-    questionElement.textContent = currentQuestion.question;
-    optionsElement.innerHTML = ""; // Clear old options
+    const currentQuestion = randomQuestions[currentQuestionIndex];
+    questionNumber.textContent = `Question ${currentQuestionIndex + 1} of ${randomQuestions.length}`;
+    questionElement.textContent = currentQuestion.question; 
+    
+    // Clear old options
+    optionsElement.innerHTML = "";
   
     currentQuestion.options.forEach((option, index) => {
       const li = document.createElement("li");
@@ -161,12 +169,12 @@ const questions = [
   }
   
   function selectAnswer(selectedIndex) {
-    const correctAnswer = questions[currentQuestionIndex].answer;
+    const correctAnswer = randomQuestions[currentQuestionIndex].answer;
     if (selectedIndex === correctAnswer) {
       score++;
       alert("Correct! 🎉");
     } else {
-      alert(`Incorrect. 😞 The correct answer is: ${questions[currentQuestionIndex].options[correctAnswer]}`);
+      alert(`Incorrect. 😞 The correct answer is: ${randomQuestions[currentQuestionIndex].options[correctAnswer]}`);
     }
     nextButton.classList.remove("hidden");
   }
@@ -174,12 +182,21 @@ const questions = [
   function showResult() {
     document.getElementById("quiz").classList.add("hidden");
     resultElement.classList.remove("hidden");
-    resultElement.textContent = `You scored ${score} out of ${questions.length}!`;
-  }  
   
+
+  // Percentage Calculation
+  const percentage = ((score / randomQuestions.length) * 100).toFixed(2);
+
+  // Result with percentage 
+  resultElement.innerHTML = `
+  <p>You scored ${score} out of ${randomQuestions.length}!</p>
+  <p>Your score percentage is ${percentage}%.</p>
+  `
+  }
+
   nextButton.onclick = () => {
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex < randomQuestions.length) {
       loadQuestion();
     } else {
       showResult();

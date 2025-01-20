@@ -54,6 +54,11 @@ h1 {
 .back:hover {
   color: #002c5c;
 }
+#q-number{
+  font-size: 40px;
+  font-weight: 350;
+  color: #356ebf;
+}
 .question {
   margin: 20px;
   font-size: 28px;
@@ -66,7 +71,6 @@ h1 {
   padding: 15px 5px;
   font-size: 38px;
   font-weight: 300;
-  
 }
 .options li button {
   padding: 12px 35px;
