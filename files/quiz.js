@@ -147,6 +147,7 @@ const questions = [
   const nextButton = document.getElementById("next-button");
   const resultElement = document.getElementById("result");
   const questionNumber = document.getElementById("q-number");
+  const feedbackElement = document.getElementById("feedback");
   
   function loadQuestion() {
     const currentQuestion = randomQuestions[currentQuestionIndex];
@@ -155,6 +156,7 @@ const questions = [
     
     // Clear old options
     optionsElement.innerHTML = "";
+    feedbackElement.textContent = "";
   
     currentQuestion.options.forEach((option, index) => {
       const li = document.createElement("li");
@@ -172,9 +174,11 @@ const questions = [
     const correctAnswer = randomQuestions[currentQuestionIndex].answer;
     if (selectedIndex === correctAnswer) {
       score++;
-      alert("Correct! 🎉");
+      feedbackElement.textContent = "Correct! 🎉";
+      feedbackElement.style.color = "green";
     } else {
-      alert(`Incorrect. 😞 The correct answer is: ${randomQuestions[currentQuestionIndex].options[correctAnswer]}`);
+      feedbackElement.textContent = `Incorrect. 😞 The correct answer is: ${randomQuestions[currentQuestionIndex].options[correctAnswer]}`;
+      feedbackElement.style.color = "red";
     }
     nextButton.classList.remove("hidden");
   }
