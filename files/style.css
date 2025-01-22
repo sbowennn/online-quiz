@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&family=Parkinsans:wght@300..800&family=Shippori+Mincho&display=swap');
-
+html{
+  background-color: hsla(294, 20%, 80%, 0.347);
+}
 body {
   scroll-behavior: smooth;
   font-family: "Parkinsans", sans-serif;
@@ -37,13 +39,19 @@ h1 {
   font-style: italic;
 }
 .button{
-  font-size: 40px;
-  letter-spacing: 2px;
+  font-size: 38px;
+  letter-spacing: 1px;
   font-weight: 550;
   padding: 10px 30px;
   border-radius: 8px;
   color: white;
   background-color: #356ebf;
+  text-decoration: none;
+
+}
+.button:hover{
+    color: #002c5c;
+    background-color: #779fe9;
 }
 .back{
   text-align: left !important;
